@@ -1,0 +1,342 @@
+/* Reset some default styles and set up box sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply styles to the body */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Style the container */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  opacity: 0.8;
+  animation: navTop 1s linear;
+}
+
+/* Style the navigation bar */
+.nav {
+  width: 57%;
+  margin: auto;
+  background-color: #fff;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav ul li {
+  margin-right: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav a:hover {
+  transform: translateX(10px);
+  border-bottom: 2px solid lightcoral;
+  cursor: pointer;
+  transition: all linear;
+}
+
+/* Style the images container */
+.img {
+  position: fixed;
+  background-color: #fff;
+  margin-left: 85%;
+  width: 140px;
+}
+
+.img img {
+  transition: transform 0.3s ease-in-out;
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+  margin-right: 2rem;
+}
+
+.img a:hover img {
+  transform: translateX(-10px);
+}
+
+/* Style the banner box */
+.bannerBox {
+  width: 100%;
+  height: 490px;
+  overflow: hidden;
+  object-fit: contain;
+  background-image: linear-gradient(30deg, hotpink, yellow);
+}
+
+.bannerBox a img {
+  width: 100%;
+  height: 470px;
+  object-fit: cover;
+  margin-top: -43px;
+}
+
+/* Add a class to push down content when the container becomes fixed */
+.content {
+  margin-top: 80px; /* Adjust the margin as needed */
+}
+
+/* Style the order box */
+.OrderBox {
+  width: 100%;
+  height: 565px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  
+  background-image: linear-gradient(30deg, hotpink, yellow);
+}
+
+.box_1, .box_2, .box_3 {
+  background-color: #fff;
+  width: 200px;
+  height: 270px;
+  border-radius: 0% 20%;
+  animation: sideShow 2s linear ;
+  cursor: pointer;
+}
+
+.box_1 img, .box_2 img, .box_3 img {
+  width: 160px;
+  height: 170px;
+  border-radius: 0% 20% 0% 0%;
+  object-fit: cover;
+  margin-left: 4%;
+  margin-top: 8%;
+}
+
+@keyframes sideShow {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes navTop {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+.box_1 p, .box_2 p, .box_3 p {
+  margin-top: 0.7rem;
+  font-size: small;
+}
+
+/* Style the order button container */
+.OrderBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-image: linear-gradient(30deg, hotpink, yellow);
+}
+
+/* Style the order button */
+.Btn {
+  padding: 10px 20px;
+  background-color: lightpink;
+  color: #000;
+  font-size: large;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: -4rem;
+  width: 100px;
+}
+
+.Btn:hover {
+  background-color: rgb(244, 177, 187);
+  /* Set your desired background color on hover */
+}
+
+/* 1077 */
+
+@media only screen and (max-width: 1254px) {
+  .container {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 1254px) {
+  .container {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav {
+    margin-left: 1rem;
+    width: 80%;
+    font-size: 0.7rem;
+  }
+}
+
+
+/* Media query for screens with a max-width of 900px */
+@media only screen and (max-width: 900px) {
+  .container {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav {
+    margin-left: 1rem;
+    width: 80%;
+    font-size: 0.7rem;
+  }
+
+  .nav ul li {
+    margin-right: 10px;
+  }
+
+  .img {
+    margin-right: 25rem;
+  }
+
+  .img img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+/* Media query for screens with a max-width of 600px */
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav {
+    margin-left: 1rem;
+    width: 80%;
+    font-size: 0.7rem;
+  }
+
+  .nav ul {
+    justify-content: center;
+    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+  }
+
+  .nav ul li {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .img {
+    width: 5rem;
+  }
+
+  .img img {
+    margin-bottom: 1rem;
+  }
+
+  .bannerBox {
+    height: 300px; /* Adjust height for smaller screens */
+  }
+
+  .OrderBox {
+    gap: 0.2rem;
+  }
+
+  .box_1,
+  .box_2,
+  .box_3 {
+    max-width: none;
+  }
+
+  .OrderBtn {
+    height: 4rem;
+    background-image: linear-gradient(30deg, hotpink, yellow);
+  }
+
+  .Btn {
+    margin-bottom: -5rem;
+  }
+
+  .Btn:hover {
+    background-color: rgb(244, 177, 187);
+    /* Set your desired background color on hover */
+  }
+}
+
+/* Media query for screens with a max-width of 400px */
+@media only screen and (max-width: 400px) {
+  .Btn {
+    width: 80px;
+  }
+
+  .bannerBox {
+    width: 100%;
+    height: 3rem;
+    object-fit: contain;
+    background-image: linear-gradient(30deg, hotpink, yellow);
+  }
+
+  .OrderBtn {
+    height: 2rem;
+    background-image: linear-gradient(30deg, hotpink, yellow);
+  }
+
+  .Btn {
+    margin-bottom: -3rem;
+  }
+
+  .Btn:hover {
+    background-color: rgb(244, 177, 187);
+    /* Set your desired background color on hover */
+  }
+
+  .OrderBox {
+    width: 100%;
+    height: 940px;
+    display: flex;
+    gap: -3px;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    background-image: linear-gradient(30deg, hotpink, yellow);
+  }
+}
