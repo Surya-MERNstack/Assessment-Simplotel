@@ -8,8 +8,12 @@
 /* Apply styles to the body */
 body {
   font-family: Arial, sans-serif;
+  background-color: #000;
 }
 
+.total_container {
+  overflow: hidden;
+}
 /* Style the container */
 .container {
   display: flex;
@@ -75,6 +79,42 @@ body {
 
 .img a:hover img {
   transform: translateX(-10px);
+}
+.bannerBox{
+  position: relative;
+}
+ .bannerdiv {
+  position: absolute;
+  width: 360px;
+  height: 110px;
+  padding: 5px;
+  color: white;
+  top:27%;
+  left: 10%;
+  background-color: lightcoral;
+  opacity: 0.8;
+ }
+
+ .bannerdiv p {
+   font-size: small;
+ }
+.split_banner{
+  width: auto;
+  height: auto;
+  position: relative;
+  margin: 1rem;
+}
+/* order */
+
+.order {
+  color: #fff;
+  margin-top: 3rem;
+  width: 10rem;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  font-size: larger;
 }
 
 /* Style the banner box */
@@ -238,6 +278,25 @@ body {
     width: 1.5rem;
     height: 1.5rem;
   }
+
+  .split_banner{
+    width: auto;
+    height: auto;
+    position: relative;
+    margin: 1rem;
+  }
+  /* order */
+  
+  .order {
+    color: #fff;
+    margin-top: 3rem;
+    width: 10rem;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    font-size: larger;
+  }
 }
 
 /* Media query for screens with a max-width of 600px */
@@ -269,20 +328,25 @@ body {
   }
 
   .img img {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   .bannerBox {
     height: 300px; /* Adjust height for smaller screens */
   }
 
+
+
   .OrderBox {
     gap: 0.2rem;
+    margin-top: 1rem;
+    height: 500px;
   }
 
   .box_1,
   .box_2,
   .box_3 {
+    margin-top: 6rem;
     max-width: none;
   }
 
@@ -298,6 +362,50 @@ body {
   .Btn:hover {
     background-color: rgb(244, 177, 187);
     /* Set your desired background color on hover */
+  }
+
+  .split_banner{
+    width: auto;
+    height: auto;
+    position: relative;
+    margin: 1rem;
+  }
+  /* order */
+  
+  .order {
+    color: #fff;
+    margin-top: 3rem;
+    width: 10rem;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    font-size: x-large;
+  }
+
+  .OrderBox {
+    width: 100%;
+    height: 1200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    background-image: linear-gradient(30deg, hotpink, yellow);
+  }
+  .box_3{
+    margin-top: -16rem;
+  }
+
+}
+
+
+@media only screen and (max-width:430px) {
+  .OrderBox {
+    gap: 3rem;
+  }
+  .box_2{
+    margin-top: -16rem;
   }
 }
 
@@ -330,13 +438,46 @@ body {
 
   .OrderBox {
     width: 100%;
-    height: 940px;
+    height: 1200px;
     display: flex;
-    gap: -3px;
     justify-content: space-around;
     align-items: center;
     text-align: center;
     flex-wrap: wrap;
     background-image: linear-gradient(30deg, hotpink, yellow);
   }
+
+  .box_3{
+    margin-top: -2rem;
+  }
+
+  
+
+.bannerBox{
+   margin-top: 6rem;
+   height: 300px;
+}
+  
+.bannerBox a img {
+  position: absolute;
+}
+ .bannerdiv {
+  position: absolute;
+  width: 360px;
+  height: 110px;
+  padding: 5px;
+  color: white;
+  top:27%;
+  left: 3%;
+  background-color: lightcoral;
+  opacity: 0.8;
+ }
+
+ .bannerdiv p {
+   font-size: small;
+ } 
+
+ .box_2{
+  margin-top: 3rem;
+}
 }
