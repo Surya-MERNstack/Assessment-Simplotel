@@ -23,7 +23,7 @@ body {
   width: 100%;
   z-index: 1000;
   opacity: 0.8;
-  animation: navTop 1s linear;
+  animation: navTop 1s ease-in-out;
 }
 
 /* Style the navigation bar */
@@ -116,7 +116,7 @@ body {
   width: 200px;
   height: 270px;
   border-radius: 0% 20%;
-  animation: sideShow 2s linear ;
+  animation: sideShow 2s ease-in-out ;
   cursor: pointer;
 }
 
